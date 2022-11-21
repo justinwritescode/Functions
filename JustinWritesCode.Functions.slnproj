@@ -1,0 +1,16 @@
+<!--
+ * Functions.slnproj
+ * 
+ *   Created: 2022-11-05-12:29:49
+ *   Modified: 2022-11-05-12:29:49
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <ItemGroup>
+    <ProjectReference Include="./src/**/*proj" />
+  </ItemGroup>
+</Project>

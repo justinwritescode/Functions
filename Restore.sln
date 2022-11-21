@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{76EAAFAD-9FDA-4299-B582-8E3C4CED5A18}") = "Restore", "Restore.restoreproj", "{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2EF94B95-6EA6-4990-811D-40C2FFE7E699}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Local|Any CPU.Build.0 = Local|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9E7734F-F6F1-4E80-A4DF-041258F7A92E} = {2EF94B95-6EA6-4990-811D-40C2FFE7E699}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC55C29F-5810-46D4-95D6-06E373F9DFB4}
+	EndGlobalSection
+EndGlobal

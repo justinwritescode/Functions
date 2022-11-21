@@ -1,0 +1,24 @@
+<!--
+ * JustinWritesCode.AzureFunctions.Crud.csproj
+ * 
+ *   Created: 2022-11-12-09:45:45
+ *   Modified: 2022-11-12-09:45:46
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Testing' Or '$(Configuration)' == 'Local'">
+		<ProjectReference Include="../AzureFunctions/JustinWritesCode.AzureFunctions.csproj" ExcludeAssets="ContentFiles" />
+		<ProjectReference Include="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.csproj" ExcludeAssets="ContentFiles" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' != 'Testing' And '$(Configuration)' != 'Local'">
+		<PackageReference Include="JustinWritesCode.AzureFunctions" ExcludeAssets="ContentFiles" />
+		<PackageReference Include="JustinWritesCode.Abstractions" ExcludeAssets="ContentFiles" />
+	</ItemGroup>
+</Project>

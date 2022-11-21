@@ -1,0 +1,21 @@
+<!--
+ * JustinWritesCode.Functions.Arrays.csproj
+ * 
+ *   Created: 2022-11-05-12:30:55
+ *   Modified: 2022-11-05-12:31:09
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AzureFunctions.Usings" />
+    <PackageReference Include="JustinWritesCode.Payloads" VersionOverride="0.0.1-Local" />
+  </ItemGroup>
+</Project>

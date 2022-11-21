@@ -1,0 +1,19 @@
+<!--
+ * JustinWritesCode.AzureFunctions.Http.csproj
+ * 
+ *   Created: 2022-11-11-06:39:09
+ *   Modified: 2022-11-11-06:39:20
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+  </PropertyGroup>
+	<Import Project="./JustinWritesCode.AzureFunctions.props" />
+</Project>

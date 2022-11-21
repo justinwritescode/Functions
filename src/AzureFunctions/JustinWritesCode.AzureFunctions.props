@@ -1,0 +1,52 @@
+<!--
+ * JustinWritesCode.AzureFunctions.props
+ * 
+ *   Created: 2022-11-11-01:17:10
+ *   Modified: 2022-11-17-08:22:50
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+ <ItemGroup>
+			<!-- <Using Include="JustinWritesCode.Functions.Extensions" /> -->
+			<Using Include="JustinWritesCode.AzureFunctions" />
+			<Using Include="JustinWritesCode.AzureFunctions.Constants" Static="true" />
+			<Using Include="JustinWritesCode.AzureFunctions.Constants.HttpHeaderNames" Static="true" />
+			<Using Include="JustinWritesCode.Abstractions" />
+ </ItemGroup>
+	<ItemGroup>
+    	<Using Include="System.ComponentModel.DataAnnotations.DisplayAttribute" Alias="ComponentModelDisplayAttribute" />
+	</ItemGroup>
+  <ItemGroup>
+			<PackageReference Include="AzureFunctions.Usings" />
+			<PackageReference Include="System.Usings" />
+			<PackageReference Include="System.ComponentModel.Usings" />
+			<PackageReference Include="Microsoft.Extensions.Logging.Usings" />
+			<PackageReference Include="Microsoft.Net.Http.Headers" />
+	</ItemGroup>
+	<ItemGroup>
+			<PackageReference Include="Microsoft.CodeAnalysis" />
+	<!-- </ItemGroup>
+	<ItemGroup Condition="'$(UsePackageReferencesForLocalDependencies)' == 'true' Or ('$(Configuration)' != 'Testing' And '$(Configuration)' != 'Local')"> -->
+			<PackageReference Include="JustinWritesCode.Abstractions" ExcludeAssets="ContentFiles" />
+			<PackageReference Include="JustinWritesCode.EntityFrameworkCore.Abstractions" ExcludeAssets="ContentFiles" />
+			<PackageReference Include="JustinWritesCode.Enumerations.Enumeration" ExcludeAssets="ContentFiles" />
+			<PackageReference Include="JustinWritesCode.Payloads" ExcludeAssets="ContentFiles" />
+			<PackageReference Include="JustinWritesCode.Enumerations.CodeGeneration" IncludeAssets="Analyzers" PrivateAssets="All" ExcludeAssets="ContentFiles" />
+  </ItemGroup>
+	<!-- <ItemGroup Condition="'$(UsePackageReferencesForLocalDependencies)' == 'false' And ('$(Configuration)' == 'Testing' Or '$(Configuration)' == 'Local')">
+			<ProjectReference Include="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
+			<ProjectReference Include="../../../EntityFrameworkCore/src/Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
+			<ProjectReference Include="../../../Types/src/Enumerations/Enumeration/JustinWritesCode.Enumerations.Enumeration.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
+			<ProjectReference Include="../../../Types/src/Payloads/JustinWritesCode.Payloads.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
+			<ProjectReference Include="../../../Types/src/Enumerations/CodeGeneration/JustinWritesCode.Enumerations.CodeGeneration.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+	<ImportGroup Condition="'$(UsePackageReferencesForLocalDependencies)' == 'true' Or ('$(Configuration)' != 'Testing' And '$(Configuration)' != 'Local')">
+		<Import Project="../../../EntityFrameworkCore/src/Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.props" />
+		<Import Project="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.props" />
+	</ImportGroup> -->
+</Project>
