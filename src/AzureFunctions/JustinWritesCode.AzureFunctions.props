@@ -11,42 +11,31 @@
 -->
 
 <Project>
- <ItemGroup>
-			<!-- <Using Include="JustinWritesCode.Functions.Extensions" /> -->
+ <ItemGroup Label="JutinWritesCode Usings">
 			<Using Include="JustinWritesCode.AzureFunctions" />
 			<Using Include="JustinWritesCode.AzureFunctions.Constants" Static="true" />
 			<Using Include="JustinWritesCode.AzureFunctions.Constants.HttpHeaderNames" Static="true" />
 			<Using Include="JustinWritesCode.Abstractions" />
  </ItemGroup>
-	<ItemGroup>
+	<ItemGroup Label="Build-In Types Usings">
     	<Using Include="System.ComponentModel.DataAnnotations.DisplayAttribute" Alias="ComponentModelDisplayAttribute" />
+    	<Using Include="System.Net.Mime.MediaTypeNames" Static="true" />
 	</ItemGroup>
-  <ItemGroup>
+  <ItemGroup Label="Usings Package Imports">
 			<PackageReference Include="AzureFunctions.Usings" />
 			<PackageReference Include="System.Usings" />
 			<PackageReference Include="System.ComponentModel.Usings" />
 			<PackageReference Include="Microsoft.Extensions.Logging.Usings" />
-			<PackageReference Include="Microsoft.Net.Http.Headers" />
 	</ItemGroup>
-	<ItemGroup>
-			<PackageReference Include="Microsoft.CodeAnalysis" />
-	<!-- </ItemGroup>
-	<ItemGroup Condition="'$(UsePackageReferencesForLocalDependencies)' == 'true' Or ('$(Configuration)' != 'Testing' And '$(Configuration)' != 'Local')"> -->
-			<PackageReference Include="JustinWritesCode.Abstractions" ExcludeAssets="ContentFiles" />
-			<PackageReference Include="JustinWritesCode.EntityFrameworkCore.Abstractions" ExcludeAssets="ContentFiles" />
-			<PackageReference Include="JustinWritesCode.Enumerations.Enumeration" ExcludeAssets="ContentFiles" />
-			<PackageReference Include="JustinWritesCode.Payloads" ExcludeAssets="ContentFiles" />
-			<PackageReference Include="JustinWritesCode.Enumerations.CodeGeneration" IncludeAssets="Analyzers" PrivateAssets="All" ExcludeAssets="ContentFiles" />
+	<ItemGroup Label="Microsoft Package References">
+			<PackageReference Include="Microsoft.CodeAnalysis" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+			<PackageReference Include="Microsoft.Net.Http.Headers" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+	</ItemGroup>
+	<ItemGroup Label="JustinWritesCode Package Reerences">
+			<PackageReference Include="JustinWritesCode.CodeGeneration.Extensions" IncludeAssets="ContentFiles" ExcludeAssets="All" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+			<PackageReference Include="JustinWritesCode.Abstractions" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+			<PackageReference Include="JustinWritesCode.EntityFrameworkCore.Abstractions" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+			<PackageReference Include="JustinWritesCode.Enumerations.Enumeration" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+			<PackageReference Include="JustinWritesCode.Payloads" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
   </ItemGroup>
-	<!-- <ItemGroup Condition="'$(UsePackageReferencesForLocalDependencies)' == 'false' And ('$(Configuration)' == 'Testing' Or '$(Configuration)' == 'Local')">
-			<ProjectReference Include="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
-			<ProjectReference Include="../../../EntityFrameworkCore/src/Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
-			<ProjectReference Include="../../../Types/src/Enumerations/Enumeration/JustinWritesCode.Enumerations.Enumeration.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
-			<ProjectReference Include="../../../Types/src/Payloads/JustinWritesCode.Payloads.csproj" ExcludeAssets="ContentFiles" TreatAsPackageReference="true" />
-			<ProjectReference Include="../../../Types/src/Enumerations/CodeGeneration/JustinWritesCode.Enumerations.CodeGeneration.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
-	<ImportGroup Condition="'$(UsePackageReferencesForLocalDependencies)' == 'true' Or ('$(Configuration)' != 'Testing' And '$(Configuration)' != 'Local')">
-		<Import Project="../../../EntityFrameworkCore/src/Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.props" />
-		<Import Project="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.props" />
-	</ImportGroup> -->
 </Project>

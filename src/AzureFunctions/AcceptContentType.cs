@@ -34,12 +34,25 @@ public enum ContentTypeEnum
 
 public partial class AcceptContentType : ContentType
 {
-	public AcceptContentType() : base(0, "Unknown") { var accept = Microsoft.Net.Http.Headers.HeaderNames.Accept; }
+	public AcceptContentType() : base(0, "Unknown") {  }
 }
 
 public partial class RequestContentType : ContentType
 {
 	public RequestContentType() : base(0, "Unknown") { }
+}
+
+public partial struct HttpMethod
+{
+    public const string GET = "GET";
+    public const string POST = "POST";
+    public const string PUT = "PUT";
+    public const string DELETE = "DELETE";
+    public const string PATCH = "PATCH";
+    public const string OPTIONS = "OPTIONS";
+    public const string HEAD = "HEAD";
+    public const string TRACE = "TRACE";
+    public const string CONNECT = "CONNECT";
 }
 
 public partial class AcceptContentType
