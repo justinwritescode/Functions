@@ -1,0 +1,18 @@
+<!--
+ * Directory.Build copy.props
+ * 
+ *   Created: 2022-11-21-11:38:29
+ *   Modified: 2022-11-21-11:38:31
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<Import Project="../../../../Directory.Build/Authors-Owners.targets" />
+	<Import Project="../../../../Directory.Build/CodeGeneration.targets" />
+	<Import Project="../../../../Directory.Build/CustomAfterCentralPackageVersions.targets" />
+	<Import Project="../../../../Directory.Build/JustInTimeVersioning.targets" />
+</Project>

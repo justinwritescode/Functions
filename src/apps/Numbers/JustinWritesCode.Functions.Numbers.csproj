@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="JustinWritesCode.AzureFunctions" />
+    <PackageReference Include="AzureFunctions.Usings" />
+    <PackageReference Include="JustinWritesCode.Payloads" />
+    <PackageReference Include="JustinWritesCode.ComponentModel" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="System.Text.Json.Usings" />
+    <PackageReference Include="JustinWritesCode.Http.Extensions" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="JustinWritesCode.Http" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="Microsoft.CodeAnalysis" VersionOverride="4.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

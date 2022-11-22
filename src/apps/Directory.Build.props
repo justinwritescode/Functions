@@ -1,0 +1,15 @@
+<Project>
+	<Import Project="../../../../Directory.Build/AssemblySigning.props" />
+	<Import Project="../../../../Directory.Build/Authors-Owners.props" />
+	<Import Project="../../../../Directory.Build/BuildConfigurations.props" />
+	<Import Project="../../../../Directory.Build/CodeGeneration.props" />
+	<Import Project="../../../../Directory.Build/CodeDocumentation.props" />
+	<Import Project="../../../../Directory.Build/CompilerVisibleProperties.props" />
+	<Import Project="../../../../Directory.Build/CustomBeforeAndAfterCentralPackageVersions.props" />
+	<Import Project="../../../../Directory.Build/ItemDefinitionGroups.props" />
+	<Import Project="../../../../Directory.Build/NoWarn.props" />
+	<Import Project="../../../../Directory.Build/SlnGen.props" />
+	<Import Project="../../../../Directory.Build/ProjectTypeInfo.props" />
+	<Import Project="../../../../Directory.Build/Testing.props" />
+	<Import Project="../../../../Directory.Build/TestingLocal.props" />
+</Project>
