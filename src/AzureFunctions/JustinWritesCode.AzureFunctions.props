@@ -12,30 +12,30 @@
 
 <Project>
  <ItemGroup Label="JutinWritesCode Usings">
-			<Using Include="JustinWritesCode.AzureFunctions" />
-			<Using Include="JustinWritesCode.AzureFunctions.Constants" Static="true" />
-			<Using Include="JustinWritesCode.AzureFunctions.Constants.HttpHeaderNames" Static="true" />
-			<Using Include="JustinWritesCode.Abstractions" />
+        <Using Include="JustinWritesCode.AzureFunctions" />
+        <Using Include="JustinWritesCode.AzureFunctions.Constants" Static="true" />
+        <Using Include="JustinWritesCode.AzureFunctions.Constants.HttpHeaderNames" Static="true" />
+        <Using Include="JustinWritesCode.Abstractions" />
  </ItemGroup>
-	<ItemGroup Label="Build-In Types Usings">
-    	<Using Include="System.ComponentModel.DataAnnotations.DisplayAttribute" Alias="ComponentModelDisplayAttribute" />
-    	<Using Include="System.Net.Mime.MediaTypeNames" Static="true" />
-	</ItemGroup>
+    <ItemGroup Label="Build-In Types Usings">
+        <Using Include="System.ComponentModel.DataAnnotations.DisplayAttribute" Alias="ComponentModelDisplayAttribute" />
+        <Using Include="System.Net.Mime.MediaTypeNames" Static="true" />
+    </ItemGroup>
   <ItemGroup Label="Usings Package Imports">
-			<PackageReference Include="AzureFunctions.Usings" />
-			<PackageReference Include="System.Usings" />
-			<PackageReference Include="System.ComponentModel.Usings" />
-			<PackageReference Include="Microsoft.Extensions.Logging.Usings" />
-	</ItemGroup>
-	<ItemGroup Label="Microsoft Package References">
-			<PackageReference Include="Microsoft.CodeAnalysis" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
-			<PackageReference Include="Microsoft.Net.Http.Headers" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
-	</ItemGroup>
-	<ItemGroup Label="JustinWritesCode Package Reerences">
-			<PackageReference Include="JustinWritesCode.CodeGeneration.Extensions" IncludeAssets="ContentFiles" ExcludeAssets="All" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
-			<PackageReference Include="JustinWritesCode.Abstractions" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
-			<PackageReference Include="JustinWritesCode.EntityFrameworkCore.Abstractions" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
-			<PackageReference Include="JustinWritesCode.Enumerations.Enumeration" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
-			<PackageReference Include="JustinWritesCode.Payloads" ExcludeAssets="ContentFiles" Condition="!@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))" />
+        <PackageReference Include="AzureFunctions.Usings" />
+        <PackageReference Include="System.Usings" />
+        <PackageReference Include="System.ComponentModel.Usings" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Usings" />
+    </ItemGroup>
+    <ItemGroup Label="Microsoft Package References">
+        <PackageReference Include="Microsoft.CodeAnalysis"  />
+        <PackageReference Include="Microsoft.Net.Http.Headers" />
+    </ItemGroup>
+    <ItemGroup Label="JustinWritesCode Package Reerences">
+        <PackageReference Include="JustinWritesCode.CodeGeneration.Extensions" IncludeAssets="ContentFiles" ExcludeAssets="All" />
+        <PackageReference Include="JustinWritesCode.Abstractions" ExcludeAssets="ContentFiles" />
+        <PackageReference Include="JustinWritesCode.EntityFrameworkCore.Abstractions" ExcludeAssets="ContentFiles"  />
+        <PackageReference Include="JustinWritesCode.Enumerations.Enumeration" ExcludeAssets="ContentFiles"  />
+        <PackageReference Include="JustinWritesCode.Payloads" ExcludeAssets="ContentFiles"  />
   </ItemGroup>
 </Project>

@@ -151,16 +151,16 @@
                 "cwd": "${workspaceFolder}/.vscode"
             }
         },
-		{
-			"type": "func",
-			"dependsOn": "build (functions)",
-			"options": {
-				"cwd": "${workspaceFolder}/src/Numbers/bin/Local/net6.0"
-			},
-			"command": "host start",
-			"isBackground": true,
-			"problemMatcher": "$func-dotnet-watch"
-		}
+        {
+            "type": "func",
+            "dependsOn": "build (functions)",
+            "options": {
+                "cwd": "${workspaceFolder}/src/Numbers/bin/Local/net6.0"
+            },
+            "command": "host start",
+            "isBackground": true,
+            "problemMatcher": "$func-dotnet-watch"
+        }
     ],
     "inputs": [
         {

@@ -14,6 +14,9 @@ namespace JustinWritesCode.AzureFunctions;
 using System.Net.Mime;
 using static System.Net.Mime.MediaTypeNames;
 using JustinWritesCode.EntityFrameworkCore.Abstractions;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 public abstract class HttpFunction<TReturnValue, TDbContext> : HttpFunction<TDbContext>
     where TDbContext : IDbContext

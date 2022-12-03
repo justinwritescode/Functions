@@ -14,14 +14,14 @@ namespace JustinWritesCode.AzureFunctions;
 
 public static class Constants
 {
-	public static class HttpHeaderNames
-	{
-		// public const string AcceptHeaderName = HeaderNames.Accept;
-		// public const string ContentTypeHeaderName = HeaderNames.ContentType;
-		// public const string ContentLengthHeaderName = HeaderNames.ContentLength;
-		// public const string ContentEncodingHeaderName = HeaderNames.ContentEncoding;
-		// public const string ContentDispositionHeaderName = HeaderNames.ContentDisposition;
-		// public const string ContentLanguageHeaderName = HeaderNames.ContentLanguage;
-		// public const string ContentRangeHeaderName = HeaderNames.ContentRange;
-	}
+    public static class HttpHeaderNames
+    {
+        // public const string AcceptHeaderName = HeaderNames.Accept;
+        // public const string ContentTypeHeaderName = HeaderNames.ContentType;
+        // public const string ContentLengthHeaderName = HeaderNames.ContentLength;
+        // public const string ContentEncodingHeaderName = HeaderNames.ContentEncoding;
+        // public const string ContentDispositionHeaderName = HeaderNames.ContentDisposition;
+        // public const string ContentLanguageHeaderName = HeaderNames.ContentLanguage;
+        // public const string ContentRangeHeaderName = HeaderNames.ContentRange;
+    }
 }

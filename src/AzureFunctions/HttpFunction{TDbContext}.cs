@@ -13,14 +13,13 @@
 
 namespace JustinWritesCode.AzureFunctions;
 using JustinWritesCode.EntityFrameworkCore.Abstractions;
+using Microsoft.Extensions.Logging;
+
 public abstract class HttpFunction<TDbContext> : HttpFunction, IHaveADbContext<TDbContext>
     where TDbContext : IDbContext
 {
     IDbContext IHaveADbContext.Db => Db;
     public TDbContext Db {get;}
 
-    public HttpFunction(ILogger<HttpFunction<TDbContext>> logger, TDbContext db) : base(logger)
-    {
-        Db = db;
-    }
+    public HttpFunction(ILogger<HttpFunction<TDbContext>> logger, TDbContext db) : base(logger) => Db = db;
 }
