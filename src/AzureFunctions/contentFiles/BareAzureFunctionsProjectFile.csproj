@@ -1,0 +1,26 @@
+<!--
+ * BareAzureFunctionsProjectFile.csproj
+ * 
+ *   Created: 2022-12-03-03:29:34
+ *   Modified: 2022-12-03-03:29:35
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <LicenseExpression>MIT</LicenseExpression>
+    <Description>No description</Description>
+    <Title>An Azure Functions Project</Title>
+    <TermsOfServiceUrl>https://example.com/terms</TermsOfServiceUrl>
+    <RepositoryUrl>https://github.com/example/example</RepositoryUrl>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Author Include="Nobody Important" Email="nobody@important.com" />
+    <Owner Include="Nobody Important" Email="nobody@important.com" />
+  </ItemGroup>
+</Project>

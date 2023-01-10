@@ -6,20 +6,32 @@
  * 
  *   Author: Justin Chase <justin@justinwritescode.com>
  *   
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-    <TargetFramework>net6.0</TargetFramework>
-    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+    <!-- <TargetFramework>net6.0</TargetFramework> -->
+    <EnableGlobalCodeGenerators>true</EnableGlobalCodeGenerators>
+    <EnableThisAssembly>true</EnableThisAssembly>
+    <EnableFluentBuilder>false</EnableFluentBuilder>
+    <OutputPath>lib/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Description>Extensions and base classes for building Azure functions</Description>
   </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.Logging" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
         <PackageReference Include="JustinWritesCode.Enumerations.CodeGeneration" IncludeAssets="Analyzers" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" />
+        <PackageReference Include="Microsoft.Azure.Functions.Extensions" />
+        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Http" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.OpenApi" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+        <PackageReference Include="Microsoft.Extensions.Logging" />
+        <PackageReference Include="MSBuild.Usings" />
+        <PackageReference Include="ThisAssembly" />
+        <PackageReference Include="ThisAssembly.Project" />
     </ItemGroup>
-    <!-- <Import Project="./JustinWritesCode.AzureFunctions.props" /> -->
 </Project>

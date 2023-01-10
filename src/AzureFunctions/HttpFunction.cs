@@ -6,15 +6,14 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-using JustinWritesCode.Payloads;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs.Host.Diagnostics;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
+using JustinWritesCode.Payloads;
 
 namespace JustinWritesCode.AzureFunctions;
 
@@ -27,6 +26,8 @@ public abstract class HttpFunction : JustinWritesCode.Abstractions.ILog
     {
         Logger = logger;
     }
+
+
 
     public static IActionResult Ok<T>(T? value = default) => value is null ? new OkResult() : new OkObjectResult(value);
     public static IActionResult NotFound<T>(T? value = default) => value is null ? new NotFoundResult() : new NotFoundObjectResult(value);

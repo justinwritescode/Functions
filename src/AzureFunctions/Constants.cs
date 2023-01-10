@@ -6,15 +6,15 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
 namespace JustinWritesCode.AzureFunctions;
 
-public static class Constants
+public static partial class Constants
 {
-    public static class HttpHeaderNames
+    public static partial class HttpHeaderNames
     {
         // public const string AcceptHeaderName = HeaderNames.Accept;
         // public const string ContentTypeHeaderName = HeaderNames.ContentType;

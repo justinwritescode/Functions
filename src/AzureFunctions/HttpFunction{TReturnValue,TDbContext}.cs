@@ -6,20 +6,17 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
 namespace JustinWritesCode.AzureFunctions;
-using System.Net.Mime;
-using static System.Net.Mime.MediaTypeNames;
-using JustinWritesCode.EntityFrameworkCore.Abstractions;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
 public abstract class HttpFunction<TReturnValue, TDbContext> : HttpFunction<TDbContext>
-    where TDbContext : IDbContext
+    where TDbContext : Microsoft.EntityFrameworkCore.DbContext
 {
     public HttpFunction(ILogger<HttpFunction<TReturnValue, TDbContext>> logger, TDbContext db) : base(logger, db)
     {
